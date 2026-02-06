@@ -2,7 +2,7 @@ import AnimateIn from './ui/AnimateIn'
 
 function Footer() {
   return (
-    <footer className="text-white py-12 px-4" style={{ backgroundColor: '#273c75' }}>
+    <footer className="bg-primary-600 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Social Media Icons */}
         <AnimateIn delay={0}>
@@ -12,7 +12,7 @@ function Footer() {
             href="#"
             className="transition-colors duration-200"
             style={{ color: '#ffffff' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#aab7d3'}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
             onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             aria-label="Facebook"
           >
@@ -31,7 +31,7 @@ function Footer() {
             href="#"
             className="transition-colors duration-200"
             style={{ color: '#ffffff' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#aab7d3'}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
             onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             aria-label="Instagram"
           >
@@ -50,7 +50,7 @@ function Footer() {
             href="#"
             className="transition-colors duration-200"
             style={{ color: '#ffffff' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#aab7d3'}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
             onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             aria-label="Twitter"
           >
@@ -73,27 +73,27 @@ function Footer() {
               href="#"
               className="font-bold transition-colors duration-200 no-underline"
               style={{ color: '#ffffff' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#aab7d3'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             >
               Privacy Policy
             </a>
-            <span style={{ color: '#aab7d3' }}>•</span>
+            <span style={{ color: '#7bcbfc' }}>•</span>
             <a
               href="#"
               className="font-bold transition-colors duration-200 no-underline"
               style={{ color: '#ffffff' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#aab7d3'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             >
               Terms & Conditions
             </a>
-            <span style={{ color: '#aab7d3' }}>•</span>
+            <span style={{ color: '#7bcbfc' }}>•</span>
             <a
               href="mailto:support@winadvocacy.com"
               className="font-bold transition-colors duration-200 no-underline"
               style={{ color: '#ffffff' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#aab7d3'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             >
               support@winadvocacy.com

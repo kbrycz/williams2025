@@ -68,7 +68,7 @@ function PopupModal() {
             ? 'opacity-100 scale-100 translate-y-0' 
             : 'opacity-0 scale-95 translate-y-4'
         }`}
-        style={{ backgroundColor: '#273c75' }}
+        style={{ backgroundColor: '#3498db' }}
       >
         <div className="p-10 md:p-14">
           {/* Close Button */}

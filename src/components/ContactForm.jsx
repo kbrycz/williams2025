@@ -77,7 +77,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
         <style>{`
           input::placeholder {
             font-weight: 700;
-            color: #273c75;
+            color: #3498db;
           }
         `}</style>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -151,7 +151,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
           />
           <button
             type="submit"
-            className="w-full px-4 py-3 rounded-md bg-secondary-600 hover:bg-secondary-700 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-400 shadow-lg text-base uppercase tracking-wide"
+            className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
           >
             {buttonText}
           </button>
@@ -165,10 +165,10 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
     <form className="space-y-4" onSubmit={handleSubmit}>
       <style>{`
         input::placeholder {
-          font-weight: 700;
-          color: #273c75;
-        }
-      `}</style>
+            font-weight: 700;
+            color: #3498db;
+          }
+        `}</style>
       <input
         type="text"
         name="firstName"
@@ -235,7 +235,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
       />
       <button
         type="submit"
-        className="w-full px-4 py-3 rounded-md bg-secondary-600 hover:bg-secondary-700 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-400 shadow-lg text-base uppercase tracking-wide"
+        className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
       >
         {buttonText}
       </button>

@@ -20,22 +20,19 @@ function SignupSection() {
               by="word" 
               delay={0.2} 
               once 
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight tracking-tight text-center md:text-left" 
-              style={{ color: '#273c75' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight text-center md:text-left" 
+              style={{ color: '#3498db' }}
             >
               Sign Up to Join Us
             </TextAnimate>
+
+            <AnimateIn delay={0.3} className="mb-8">
+              <p className="text-base md:text-lg text-neutral-600 text-center md:text-left">
+                Sign up and be part of the <span className="font-bold text-primary-600">movement for change</span> in our community.
+              </p>
+            </AnimateIn>
+
             <div className="space-y-4">
-              <TextAnimate 
-                as="p" 
-                animation="fadeIn" 
-                by="word" 
-                delay={0.3} 
-                once 
-                className="text-lg md:text-xl font-semibold text-secondary-600 leading-relaxed"
-              >
-                Be part of the movement for change.
-              </TextAnimate>
               <TextAnimate 
                 as="p" 
                 animation="fadeIn" 
@@ -61,7 +58,7 @@ function SignupSection() {
 
           {/* Form Container on Right */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <AnimateIn delay={0.4} className="w-full max-w-lg rounded-lg shadow-xl p-6 md:p-8 lg:p-10 mt-8 md:mt-16" style={{ backgroundColor: '#273c75' }}>
+            <AnimateIn delay={0.4} className="w-full max-w-lg rounded-lg shadow-xl p-6 md:p-8 lg:p-10 mt-8 md:mt-16" style={{ backgroundColor: '#3498db' }}>
               <ContactForm 
                 compact={false} 
                 buttonText="SUBMIT"

@@ -28,7 +28,7 @@ function ImageTextSection() {
               delay={0.2} 
               once 
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight tracking-tight text-center md:text-left" 
-              style={{ color: '#273c75' }}
+              style={{ color: '#3498db' }}
             >
               Championing Solutions. Electing Change.
             </TextAnimate>

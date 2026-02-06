@@ -28,13 +28,13 @@ function ContributionButtons() {
               }
             `}
             style={{
-              backgroundColor: isSelected ? '#273c75' : '#ffffff',
-              border: `2px solid ${isSelected ? '#273c75' : '#273c75'}`,
-              color: isSelected ? '#ffffff' : '#273c75',
+              backgroundColor: isSelected ? '#3498db' : '#ffffff',
+              border: `2px solid ${isSelected ? '#3498db' : '#3498db'}`,
+              color: isSelected ? '#ffffff' : '#3498db',
             }}
             onMouseEnter={(e) => {
               if (!isSelected) {
-                e.target.style.backgroundColor = '#eef1f7'
+                e.target.style.backgroundColor = '#f0f8ff'
               }
             }}
             onMouseLeave={(e) => {
@@ -61,7 +61,7 @@ const SectionHeading = memo(function SectionHeading() {
       delay={0.2} 
       once 
       className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight tracking-tight text-center" 
-      style={{ color: '#273c75' }}
+      style={{ color: '#3498db' }}
     >
       Choose Your Contribution
     </TextAnimate>
@@ -79,7 +79,7 @@ const InfoText = memo(function InfoText() {
         delay={0} 
         once 
         className="text-sm md:text-base" 
-        style={{ color: '#1b2a53' }}
+        style={{ color: '#1a547f' }}
       >
         Your support helps us continue our mission to create positive change.
       </TextAnimate>
@@ -90,7 +90,7 @@ const InfoText = memo(function InfoText() {
         delay={0.1} 
         once 
         className="text-xs md:text-sm" 
-        style={{ color: '#213364' }}
+        style={{ color: '#1b639a' }}
       >
         Contributions are not deductible for federal income tax purposes.
       </TextAnimate>
@@ -100,7 +100,7 @@ const InfoText = memo(function InfoText() {
 
 function PricingSection() {
   return (
-    <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-16" style={{ backgroundColor: '#eef1f7' }}>
+    <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-16" style={{ backgroundColor: '#f0f8ff' }}>
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <SectionHeading />
