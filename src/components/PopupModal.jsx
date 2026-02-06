@@ -8,7 +8,7 @@ import ContactForm from './ContactForm'
  * 
  * ⬇️ SET THIS TO true TO ALWAYS SHOW THE POPUP (ignores localStorage) ⬇️
  */
-const ALWAYS_SHOW_POPUP = true
+const ALWAYS_SHOW_POPUP = false
 
 function PopupModal() {
   const [isOpen, setIsOpen] = useState(false)
