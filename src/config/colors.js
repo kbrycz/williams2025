@@ -7,50 +7,50 @@
  */
 
 export const colors = {
-  // Primary colors - main brand colors (#8e44ad)
-  // Full scale properly derived from #8e44ad
+  // Primary colors - main brand colors (#273c75)
+  // Full scale properly derived from #273c75
   primary: {
-    50: '#f5eef8',
-    100: '#ead8f1',
-    200: '#d9b5e3',
-    300: '#c488d1',
-    400: '#b063bf',
-    500: '#9d4fad',
-    600: '#8e44ad', // Your specified primary color
-    700: '#7a3a95',
-    800: '#66317d',
-    900: '#522865',
-    950: '#3d1d4a',
+    50: '#eef1f7',
+    100: '#d5dce9',
+    200: '#aab7d3',
+    300: '#7f93bd',
+    400: '#546fa7',
+    500: '#3a5291',
+    600: '#273c75', // Your specified primary color
+    700: '#213364',
+    800: '#1b2a53',
+    900: '#152142',
+    950: '#0e1530',
   },
   
-  // Secondary colors - lighter purple variations that complement #8e44ad
+  // Secondary colors - red variations (#d63031)
   secondary: {
-    50: '#f8f4fb',
-    100: '#f0e8f6',
-    200: '#e0d1ed',
-    300: '#c9a8dd',
-    400: '#b39ddb',
-    500: '#9a60b4',
-    600: '#8b4fa0',
-    700: '#7a3a8c',
-    800: '#682f78',
-    900: '#562664',
-    950: '#441d50',
+    50: '#fef2f2',
+    100: '#fde3e3',
+    200: '#fbc8c8',
+    300: '#f7a0a0',
+    400: '#f06767',
+    500: '#e63e3f',
+    600: '#d63031', // Your specified secondary color
+    700: '#b32526',
+    800: '#942324',
+    900: '#7a2324',
+    950: '#420e0e',
   },
   
-  // Accent colors - purple-pink variations that harmonize with #8e44ad
+  // Accent colors - warm gold/yellow that complements blue and red
   accent: {
-    50: '#faf0f8',
-    100: '#f5e0f1',
-    200: '#ecc0e3',
-    300: '#e095d1',
-    400: '#d46abf',
-    500: '#c84fad',
-    600: '#b8449d',
-    700: '#9d3a85',
-    800: '#822f6d',
-    900: '#672555',
-    950: '#4c1d3d',
+    50: '#fefce8',
+    100: '#fef9c3',
+    200: '#fef08a',
+    300: '#fde047',
+    400: '#facc15',
+    500: '#eab308',
+    600: '#ca8a04',
+    700: '#a16207',
+    800: '#854d0e',
+    900: '#713f12',
+    950: '#422006',
   },
   
   // Neutral colors
@@ -68,50 +68,49 @@ export const colors = {
     950: '#0a0a0a',
   },
   
-  // Semantic colors - purple variations instead of green/yellow/red
-  // Success: lighter, softer purple tones
+  // Semantic colors
   success: {
-    50: '#f5eef8',
-    100: '#ead8f1',
-    200: '#d9b5e3',
-    300: '#c488d1',
-    400: '#b063bf',
-    500: '#9d4fad',
-    600: '#8e44ad',
-    700: '#7a3a95',
-    800: '#66317d',
-    900: '#522865',
-    950: '#3d1d4a',
+    50: '#f0fdf4',
+    100: '#dcfce7',
+    200: '#bbf7d0',
+    300: '#86efac',
+    400: '#4ade80',
+    500: '#22c55e',
+    600: '#16a34a',
+    700: '#15803d',
+    800: '#166534',
+    900: '#14532d',
+    950: '#052e16',
   },
   
-  // Warning: warmer purple tones with slight pink tint
+  // Warning
   warning: {
-    50: '#faf0f8',
-    100: '#f5e0f1',
-    200: '#ecc0e3',
-    300: '#e095d1',
-    400: '#d46abf',
-    500: '#c84fad',
-    600: '#b8449d',
-    700: '#9d3a85',
-    800: '#822f6d',
-    900: '#672555',
-    950: '#4c1d3d',
+    50: '#fefce8',
+    100: '#fef9c3',
+    200: '#fef08a',
+    300: '#fde047',
+    400: '#facc15',
+    500: '#eab308',
+    600: '#ca8a04',
+    700: '#a16207',
+    800: '#854d0e',
+    900: '#713f12',
+    950: '#422006',
   },
   
-  // Error: darker, deeper purple tones
+  // Error
   error: {
-    50: '#f0e8f6',
-    100: '#e0d1ed',
-    200: '#c9a8dd',
-    300: '#a87bc7',
-    400: '#8b4fa0',
-    500: '#7a3a8c',
-    600: '#682f78',
-    700: '#562664',
-    800: '#441d50',
-    900: '#33143c',
-    950: '#220b28',
+    50: '#fef2f2',
+    100: '#fde3e3',
+    200: '#fbc8c8',
+    300: '#f7a0a0',
+    400: '#f06767',
+    500: '#e63e3f',
+    600: '#d63031',
+    700: '#b32526',
+    800: '#942324',
+    900: '#7a2324',
+    950: '#420e0e',
   },
   
   // Base colors

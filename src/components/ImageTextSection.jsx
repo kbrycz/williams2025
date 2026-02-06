@@ -27,8 +27,8 @@ function ImageTextSection() {
               by="word" 
               delay={0.2} 
               once 
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight tracking-tight" 
-              style={{ color: '#8e44ad' }}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight tracking-tight text-center md:text-left" 
+              style={{ color: '#273c75' }}
             >
               Championing Solutions. Electing Change.
             </TextAnimate>
@@ -39,7 +39,7 @@ function ImageTextSection() {
                 by="word" 
                 delay={0.4} 
                 once 
-                className="text-lg md:text-xl font-semibold text-orange-500 leading-relaxed"
+                className="text-lg md:text-xl font-semibold text-secondary-600 leading-relaxed"
               >
                 We believe in the power of diverse voices to drive meaningful change.
               </TextAnimate>

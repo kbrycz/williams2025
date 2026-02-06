@@ -77,7 +77,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
         <style>{`
           input::placeholder {
             font-weight: 700;
-            color: #8e44ad;
+            color: #273c75;
           }
         `}</style>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -151,7 +151,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
           />
           <button
             type="submit"
-            className="w-full px-4 py-3 rounded-md bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 shadow-lg text-base uppercase tracking-wide"
+            className="w-full px-4 py-3 rounded-md bg-secondary-600 hover:bg-secondary-700 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-400 shadow-lg text-base uppercase tracking-wide"
           >
             {buttonText}
           </button>
@@ -166,7 +166,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
       <style>{`
         input::placeholder {
           font-weight: 700;
-          color: #8e44ad;
+          color: #273c75;
         }
       `}</style>
       <input
@@ -235,7 +235,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
       />
       <button
         type="submit"
-        className="w-full px-4 py-3 rounded-md bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 shadow-lg text-base uppercase tracking-wide"
+        className="w-full px-4 py-3 rounded-md bg-secondary-600 hover:bg-secondary-700 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-400 shadow-lg text-base uppercase tracking-wide"
       >
         {buttonText}
       </button>
