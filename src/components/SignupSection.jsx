@@ -32,7 +32,7 @@ function SignupSection() {
                 by="word" 
                 delay={0.3} 
                 once 
-                className="text-lg md:text-xl font-semibold text-secondary-600 leading-relaxed text-center md:text-left"
+                className="text-lg md:text-xl font-semibold text-secondary-600 leading-relaxed"
               >
                 Be part of the movement for change.
               </TextAnimate>
