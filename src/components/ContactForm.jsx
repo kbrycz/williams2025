@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { colors } from '@/config/colors'
 
 /**
  * Reusable Contact Form Component
@@ -77,7 +78,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
         <style>{`
           input::placeholder {
             font-weight: 700;
-            color: #3498db;
+            color: ${colors.primary[500]};
           }
         `}</style>
         <div className="grid grid-cols-2 gap-3">
@@ -162,7 +163,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
       <style>{`
         input::placeholder {
             font-weight: 700;
-            color: #3498db;
+            color: ${colors.primary[500]};
           }
         `}</style>
       <input

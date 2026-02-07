@@ -1,4 +1,6 @@
 import AnimateIn from './ui/AnimateIn'
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 function Footer() {
   return (
@@ -9,10 +11,10 @@ function Footer() {
           <div className="flex justify-center items-center gap-6 mb-6">
           {/* Facebook Icon */}
           <a
-            href="#"
+            href={siteData.contact.social.facebook}
             className="transition-colors duration-200"
             style={{ color: '#ffffff' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
+            onMouseEnter={(e) => e.currentTarget.style.color = colors.primary[300]}
             onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             aria-label="Facebook"
           >
@@ -28,10 +30,10 @@ function Footer() {
 
           {/* Instagram Icon */}
           <a
-            href="#"
+            href={siteData.contact.social.instagram}
             className="transition-colors duration-200"
             style={{ color: '#ffffff' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
+            onMouseEnter={(e) => e.currentTarget.style.color = colors.primary[300]}
             onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             aria-label="Instagram"
           >
@@ -47,10 +49,10 @@ function Footer() {
 
           {/* Twitter/X Icon */}
           <a
-            href="#"
+            href={siteData.contact.social.twitter}
             className="transition-colors duration-200"
             style={{ color: '#ffffff' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
+            onMouseEnter={(e) => e.currentTarget.style.color = colors.primary[300]}
             onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             aria-label="Twitter"
           >
@@ -70,33 +72,33 @@ function Footer() {
         <AnimateIn delay={0.2}>
           <div className="flex flex-wrap justify-center items-center gap-4 text-sm">
             <a
-              href="#"
+              href={siteData.contact.privacyUrl}
               className="font-bold transition-colors duration-200 no-underline"
               style={{ color: '#ffffff' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
+              onMouseEnter={(e) => e.currentTarget.style.color = colors.primary[300]}
               onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             >
               Privacy Policy
             </a>
-            <span style={{ color: '#7bcbfc' }}>•</span>
+            <span style={{ color: colors.primary[300] }}>•</span>
             <a
-              href="#"
+              href={siteData.contact.termsUrl}
               className="font-bold transition-colors duration-200 no-underline"
               style={{ color: '#ffffff' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
+              onMouseEnter={(e) => e.currentTarget.style.color = colors.primary[300]}
               onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             >
               Terms & Conditions
             </a>
-            <span style={{ color: '#7bcbfc' }}>•</span>
+            <span style={{ color: colors.primary[300] }}>•</span>
             <a
-              href="mailto:support@winadvocacy.com"
+              href={`mailto:${siteData.contact.email}`}
               className="font-bold transition-colors duration-200 no-underline"
               style={{ color: '#ffffff' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7bcbfc'}
+              onMouseEnter={(e) => e.currentTarget.style.color = colors.primary[300]}
               onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
             >
-              support@winadvocacy.com
+              {siteData.contact.email}
             </a>
           </div>
         </AnimateIn>

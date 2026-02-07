@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import ContactForm from './ContactForm'
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 /**
  * Popup Modal Component
@@ -68,7 +70,7 @@ function PopupModal() {
             ? 'opacity-100 scale-100 translate-y-0' 
             : 'opacity-0 scale-95 translate-y-4'
         }`}
-        style={{ backgroundColor: '#3498db' }}
+        style={{ backgroundColor: colors.primary[500] }}
       >
         <div className="p-10 md:p-14">
           {/* Close Button */}
@@ -84,7 +86,7 @@ function PopupModal() {
 
           {/* Heading */}
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white text-center mb-8 leading-tight pr-8">
-            Join our movement and help build a stronger community together.
+            {siteData.popup.headline}
           </h2>
 
           {/* Form */}
@@ -96,13 +98,12 @@ function PopupModal() {
 
           {/* Disclaimer */}
           <p className="text-white/70 text-xs mt-6 text-center leading-relaxed">
-            By providing your contact information, you agree to receive updates and messages from us. 
-            Message and data rates may apply. Reply STOP to opt out. For questions, reach out to{' '}
-            <a href="mailto:support@winadvocacy.com" className="underline hover:no-underline transition-all text-white/90">
-              support@winadvocacy.com
+            {siteData.popup.disclaimerText} For questions, reach out to{' '}
+            <a href={`mailto:${siteData.contact.email}`} className="underline hover:no-underline transition-all text-white/90">
+              {siteData.contact.email}
             </a>
-            . Your information will not be shared with third parties. View our{' '}
-            <a href="#" className="underline hover:no-underline transition-all text-white/90">
+            . View our{' '}
+            <a href={siteData.contact.privacyUrl} className="underline hover:no-underline transition-all text-white/90">
               Privacy Policy
             </a>
             .

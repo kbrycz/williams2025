@@ -1,4 +1,3 @@
-import './App.css'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import HeroSection from './components/HeroSection'
 import VideoSection from './components/VideoSection'
@@ -10,7 +9,7 @@ import PopupModal from './components/PopupModal'
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
 import AboutPage from './components/AboutPage'
-import JordansPlan from './components/JordansPlan'
+import PlanPage from './components/PlanPage'
 import ContactPage from './components/ContactPage'
 
 function HomePage() {
@@ -47,7 +46,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/jordans-plan" element={<JordansPlan />} />
+          <Route path="/plan" element={<PlanPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Layout>

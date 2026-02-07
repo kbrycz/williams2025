@@ -1,11 +1,13 @@
 import AnimateIn from './ui/AnimateIn'
-import sectionImage from '../assets/img2.png'
+import sectionImage from '../assets/video-thumbnail.png'
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 function VideoSection() {
   return (
     <section
       className="w-full py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-16"
-      style={{ backgroundColor: '#1b639a' }}
+      style={{ backgroundColor: colors.primary[700] }}
     >
       <div className="max-w-4xl mx-auto">
         {/* Video Thumbnail */}
@@ -15,7 +17,7 @@ function VideoSection() {
           >
             <img
               src={sectionImage}
-              alt="Jordan Williams in the community"
+              alt={`${siteData.candidate.fullName} in the community`}
               className="absolute inset-0 w-full h-full object-cover"
             />
 
@@ -23,7 +25,7 @@ function VideoSection() {
             <div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(135deg, rgba(27,99,154,0.2) 0%, rgba(0,0,0,0.35) 100%)',
+                background: `linear-gradient(135deg, ${colors.primary[700]}33 0%, rgba(0,0,0,0.35) 100%)`,
               }}
             />
 
@@ -34,7 +36,7 @@ function VideoSection() {
               >
                 <svg
                   className="w-7 h-7 md:w-8 md:h-8 ml-1"
-                  style={{ color: '#1a547f' }}
+                  style={{ color: colors.primary[800] }}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -48,9 +50,9 @@ function VideoSection() {
         {/* Heading */}
         <AnimateIn delay={0.3}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-white leading-tight tracking-tight mb-6 md:mb-8">
-            Jordan Williams knows what it means to fight for a better life,{' '}
-            <span style={{ color: '#f1c40f' }}>
-              because he's lived that struggle.
+            {siteData.video.headline}{' '}
+            <span style={{ color: colors.secondary[500] }}>
+              {siteData.video.highlightText}
             </span>
           </h2>
         </AnimateIn>
@@ -58,8 +60,7 @@ function VideoSection() {
         {/* Sub-text */}
         <AnimateIn delay={0.4}>
           <p className="text-center text-white/80 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-10 md:mb-12">
-            <strong className="text-white">Raised in a working-class family, he relied on community support and public schools early in life to get ahead.</strong>{' '}
-            He went on to become an advocate for everyday people, earn the trust of his neighbors, and dedicate his career to making sure no one gets left behind.
+            {siteData.video.description}
           </p>
         </AnimateIn>
 
@@ -69,7 +70,7 @@ function VideoSection() {
             <a
               href="#about"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-lg transition-all duration-200 hover:brightness-110 hover:shadow-lg"
-              style={{ backgroundColor: '#f1c40f', color: '#1a547f' }}
+              style={{ backgroundColor: colors.secondary[500], color: colors.primary[800] }}
             >
               Learn More
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

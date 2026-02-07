@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logoImage from '../assets/logo.png'
+import logoImage from '../assets/logo-white.png'
 import logoColorImage from '../assets/logo-color.png'
 import AnimateIn from './ui/AnimateIn'
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 function Navbar({ variant = 'transparent' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,7 +20,7 @@ function Navbar({ variant = 'transparent' }) {
   const navItems = [
     { name: 'Home', to: '/' },
     { name: 'About', to: '/about' },
-    { name: "Jordan's Plan", to: '/jordans-plan' },
+    { name: `${siteData.candidate.firstName}'s Plan`, to: '/plan' },
     { name: 'Contact', to: '/contact' },
   ]
 
@@ -36,7 +38,7 @@ function Navbar({ variant = 'transparent' }) {
     ? 'xl:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors duration-300 mt-4'
     : 'xl:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors duration-300 mt-4'
 
-  const mobileMenuBtnColor = isWhite ? '#3498db' : 'currentColor'
+  const mobileMenuBtnColor = isWhite ? colors.primary[500] : 'currentColor'
 
   return (
     <nav className={`${navBg} z-50 transition-colors duration-300`}>
@@ -47,13 +49,13 @@ function Navbar({ variant = 'transparent' }) {
             <Link to="/" className="flex-shrink-0 relative block">
               <img 
                 src={logoColorImage}
-                alt="Logo"
+                alt={siteData.campaign.name}
                 className={`h-24 xl:h-32 2xl:h-40 w-auto ml-4 xl:ml-8 transition-opacity duration-300 ${isWhite ? 'opacity-100' : 'opacity-0'}`}
                 style={{ position: 'relative', top: '10px', left: '10px' }}
               />
               <img 
                 src={logoImage}
-                alt="Logo"
+                alt={siteData.campaign.name}
                 className={`h-28 xl:h-36 2xl:h-44 w-auto ml-4 xl:ml-8 absolute top-0 left-0 transition-opacity duration-300 ${isWhite ? 'opacity-0' : 'opacity-100'}`}
               />
             </Link>
@@ -77,15 +79,15 @@ function Navbar({ variant = 'transparent' }) {
           <div className="hidden xl:flex items-center gap-4 mt-8 xl:mt-10">
             {/* Social Icons - always rendered for layout, invisible on home */}
             <div className={`flex items-center gap-2 transition-opacity duration-300 ${isWhite ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-              <a href="#" className={socialBtnClass} aria-label="Facebook">
+              <a href={siteData.contact.social.facebook} className={socialBtnClass} aria-label="Facebook">
                 <span className="font-bold text-xs">f</span>
               </a>
-              <a href="#" className={socialBtnClass} aria-label="Instagram">
+              <a href={siteData.contact.social.instagram} className={socialBtnClass} aria-label="Instagram">
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
               </a>
-              <a href="#" className={socialBtnClass} aria-label="X (Twitter)">
+              <a href={siteData.contact.social.twitter} className={socialBtnClass} aria-label="X (Twitter)">
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
@@ -94,9 +96,12 @@ function Navbar({ variant = 'transparent' }) {
 
             {/* Donate Button */}
             <AnimateIn delay={0.5}>
-              <button className="bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-7 py-2 rounded-md transition-all duration-200 uppercase tracking-widest text-sm hover:scale-105 hover:shadow-lg active:scale-95">
+              <a
+                href={siteData.campaign.donateUrl}
+                className="bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-7 py-2 rounded-md transition-all duration-200 uppercase tracking-widest text-sm hover:scale-105 hover:shadow-lg active:scale-95 inline-block"
+              >
                 Donate
-              </button>
+              </a>
             </AnimateIn>
           </div>
 
@@ -141,20 +146,23 @@ function Navbar({ variant = 'transparent' }) {
             ))}
             {isWhite && (
               <div className="flex gap-3 pt-3 pb-2 px-4">
-                <a href="#" className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="Facebook">
+                <a href={siteData.contact.social.facebook} className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="Facebook">
                   <span className="font-bold text-sm">f</span>
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="Instagram">
+                <a href={siteData.contact.social.instagram} className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="Instagram">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="X (Twitter)">
+                <a href={siteData.contact.social.twitter} className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="X (Twitter)">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
               </div>
             )}
-            <button className="w-full bg-primary-500 hover:bg-primary-400 text-white font-bold px-6 py-3 rounded-md transition-colors duration-200 uppercase tracking-wider text-sm mt-3">
+            <a
+              href={siteData.campaign.donateUrl}
+              className="block w-full text-center bg-primary-500 hover:bg-primary-400 text-white font-bold px-6 py-3 rounded-md transition-colors duration-200 uppercase tracking-wider text-sm mt-3"
+            >
               Donate
-            </button>
+            </a>
           </div>
         </div>
       )}

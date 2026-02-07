@@ -1,11 +1,13 @@
 import { useState, memo } from 'react'
 import { TextAnimate } from '@/components/ui/text-animate'
 import AnimateIn from './ui/AnimateIn'
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 // Separate component for buttons to isolate state changes
 function ContributionButtons() {
   const [selectedAmount, setSelectedAmount] = useState(null)
-  const amounts = [10, 25, 50, 100, 250, 'Other']
+  const amounts = [...siteData.donation.amounts, 'Other']
 
   const handleAmountClick = (amount) => {
     setSelectedAmount(selectedAmount === amount ? null : amount)
@@ -28,13 +30,13 @@ function ContributionButtons() {
               }
             `}
             style={{
-              backgroundColor: isSelected ? '#3498db' : '#ffffff',
-              border: `2px solid ${isSelected ? '#3498db' : '#3498db'}`,
-              color: isSelected ? '#ffffff' : '#3498db',
+              backgroundColor: isSelected ? colors.primary[500] : '#ffffff',
+              border: `2px solid ${colors.primary[500]}`,
+              color: isSelected ? '#ffffff' : colors.primary[500],
             }}
             onMouseEnter={(e) => {
               if (!isSelected) {
-                e.target.style.backgroundColor = '#f0f8ff'
+                e.target.style.backgroundColor = colors.primary[50]
               }
             }}
             onMouseLeave={(e) => {
@@ -61,7 +63,7 @@ const SectionHeading = memo(function SectionHeading() {
       delay={0.2} 
       once 
       className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight tracking-tight text-center" 
-      style={{ color: '#3498db' }}
+      style={{ color: colors.primary[500] }}
     >
       Choose Your Contribution
     </TextAnimate>
@@ -79,7 +81,7 @@ const InfoText = memo(function InfoText() {
         delay={0} 
         once 
         className="text-sm md:text-base" 
-        style={{ color: '#1a547f' }}
+        style={{ color: colors.primary[800] }}
       >
         Your support helps us continue our mission to create positive change.
       </TextAnimate>
@@ -90,9 +92,9 @@ const InfoText = memo(function InfoText() {
         delay={0.1} 
         once 
         className="text-xs md:text-sm" 
-        style={{ color: '#1b639a' }}
+        style={{ color: colors.primary[700] }}
       >
-        Contributions are not deductible for federal income tax purposes.
+        {siteData.donation.disclaimer}
       </TextAnimate>
     </div>
   )
@@ -100,7 +102,7 @@ const InfoText = memo(function InfoText() {
 
 function PricingSection() {
   return (
-    <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-16" style={{ backgroundColor: '#f0f8ff' }}>
+    <section className="w-full py-16 md:py-24 px-6 md:px-12 lg:px-16" style={{ backgroundColor: colors.primary[50] }}>
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <SectionHeading />

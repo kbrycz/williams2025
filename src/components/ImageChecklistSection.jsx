@@ -1,14 +1,8 @@
-import sectionImage from '../assets/section.png'
+import sectionImage from '../assets/about-intro.png'
 import { TextAnimate } from '@/components/ui/text-animate'
 import AnimateIn from './ui/AnimateIn'
-
-const checklistItems = [
-  'Housing Affordability',
-  'Public Safety',
-  'Cost of Living',
-  'Education',
-  'Jobs & Economy',
-]
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 function CheckIcon() {
   return (
@@ -20,7 +14,7 @@ function CheckIcon() {
     >
       <path
         d="M9 12.75L11.25 15L15 9.75M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-        stroke="#3498db"
+        stroke={colors.primary[500]}
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -55,19 +49,19 @@ function ImageChecklistSection() {
               delay={0.2}
               once
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight text-center md:text-left"
-              style={{ color: '#3498db' }}
+              style={{ color: colors.primary[500] }}
             >
-              Fighting for Our Community
+              {siteData.checklist.heading}
             </TextAnimate>
 
             <AnimateIn delay={0.3} className="mb-8">
               <p className="text-base md:text-lg text-neutral-600 text-center md:text-left">
-                These are some of the <span className="font-bold text-primary-600">top priorities</span> our campaign is focused on.
+                {siteData.checklist.subheading}
               </p>
             </AnimateIn>
 
             <ul className="space-y-5">
-              {checklistItems.map((item, index) => (
+              {siteData.checklist.items.map((item, index) => (
                 <AnimateIn
                   key={item}
                   delay={0.4 + index * 0.1}

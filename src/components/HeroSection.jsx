@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import heroImage from '../assets/hero.png'
+import heroImage from '../assets/hero-bg.png'
 import { TextAnimate } from '@/components/ui/text-animate'
 import AnimateIn from './ui/AnimateIn'
+import siteData from '../config/siteData'
 
 function HeroSection() {
   const [phone, setPhone] = useState('')
@@ -51,7 +52,7 @@ function HeroSection() {
               once 
               className="text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight tracking-tight"
             >
-              Your voice matters. Let's move forward.
+              {siteData.hero.headline}
             </TextAnimate>
 
             {/* Form */}
@@ -101,12 +102,12 @@ function HeroSection() {
             {/* Disclaimer Text */}
             <AnimateIn delay={0.5}>
               <p className="text-white/80 text-[10px] mt-4 leading-relaxed">
-                By providing your contact information, you agree to receive campaign updates and messages from us. Message and data rates may apply. Reply STOP to opt out. For more information, contact{' '}
-                <a href="mailto:support@winadvocacy.com" className="underline hover:no-underline transition-all">
-                  support@winadvocacy.com
+                {siteData.hero.disclaimerText} For more information, contact{' '}
+                <a href={`mailto:${siteData.contact.email}`} className="underline hover:no-underline transition-all">
+                  {siteData.contact.email}
                 </a>
                 {' '}or view our{' '}
-                <a href="#" className="underline hover:no-underline transition-all">
+                <a href={siteData.contact.privacyUrl} className="underline hover:no-underline transition-all">
                   Privacy Policy
                 </a>
                 .
@@ -117,14 +118,14 @@ function HeroSection() {
             <AnimateIn delay={0.6}>
               <div className="flex gap-2.5 mt-4">
                 <a 
-                  href="#" 
+                  href={siteData.contact.social.facebook} 
                   className="w-9 h-9 rounded-full border border-white/30 hover:bg-white/10 flex items-center justify-center text-white transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <span className="font-bold text-sm">f</span>
                 </a>
                 <a 
-                  href="#" 
+                  href={siteData.contact.social.instagram} 
                   className="w-9 h-9 rounded-full border border-white/30 hover:bg-white/10 flex items-center justify-center text-white transition-colors duration-200"
                   aria-label="Instagram"
                 >
@@ -133,7 +134,7 @@ function HeroSection() {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href={siteData.contact.social.twitter} 
                   className="w-9 h-9 rounded-full border border-white/30 hover:bg-white/10 flex items-center justify-center text-white transition-colors duration-200"
                   aria-label="X (Twitter)"
                 >
@@ -171,7 +172,7 @@ function HeroSection() {
               once 
               className="text-4xl lg:text-[2.75rem] xl:text-5xl font-bold text-white mb-7 lg:mb-9 leading-tight tracking-tight"
             >
-              Your voice matters. Let's move forward.
+              {siteData.hero.headline}
             </TextAnimate>
 
             {/* Form */}
@@ -224,12 +225,12 @@ function HeroSection() {
             {/* Disclaimer Text */}
             <AnimateIn delay={0.6}>
               <p className="text-white/80 text-xs mt-5 lg:mt-7 leading-relaxed">
-                By providing your contact information, you agree to receive campaign updates and messages from us. Message and data rates may apply. Reply STOP to opt out. For more information, contact{' '}
-                <a href="mailto:support@winadvocacy.com" className="underline hover:no-underline transition-all">
-                  support@winadvocacy.com
+                {siteData.hero.disclaimerText} For more information, contact{' '}
+                <a href={`mailto:${siteData.contact.email}`} className="underline hover:no-underline transition-all">
+                  {siteData.contact.email}
                 </a>
                 {' '}or view our{' '}
-                <a href="#" className="underline hover:no-underline transition-all">
+                <a href={siteData.contact.privacyUrl} className="underline hover:no-underline transition-all">
                   Privacy Policy
                 </a>
                 .
@@ -240,14 +241,14 @@ function HeroSection() {
             <AnimateIn delay={0.7}>
               <div className="flex gap-3 mt-6 lg:mt-8">
                 <a 
-                  href="#" 
+                  href={siteData.contact.social.facebook} 
                   className="w-11 h-11 rounded-full border border-white/30 hover:bg-white/10 flex items-center justify-center text-white transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <span className="font-bold text-base">f</span>
                 </a>
                 <a 
-                  href="#" 
+                  href={siteData.contact.social.instagram} 
                   className="w-11 h-11 rounded-full border border-white/30 hover:bg-white/10 flex items-center justify-center text-white transition-colors duration-200"
                   aria-label="Instagram"
                 >
@@ -256,7 +257,7 @@ function HeroSection() {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href={siteData.contact.social.twitter} 
                   className="w-11 h-11 rounded-full border border-white/30 hover:bg-white/10 flex items-center justify-center text-white transition-colors duration-200"
                   aria-label="X (Twitter)"
                 >

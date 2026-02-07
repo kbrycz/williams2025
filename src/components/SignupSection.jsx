@@ -1,6 +1,8 @@
 import { TextAnimate } from '@/components/ui/text-animate'
 import AnimateIn from './ui/AnimateIn'
 import ContactForm from './ContactForm'
+import siteData from '../config/siteData'
+import { colors } from '@/config/colors'
 
 function SignupSection() {
   const handleSubmit = (formData) => {
@@ -21,44 +23,37 @@ function SignupSection() {
               delay={0.2} 
               once 
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight text-center md:text-left" 
-              style={{ color: '#3498db' }}
+              style={{ color: colors.primary[500] }}
             >
-              Sign Up to Join Us
+              {siteData.signup.heading}
             </TextAnimate>
 
             <AnimateIn delay={0.3} className="mb-8">
               <p className="text-base md:text-lg text-neutral-600 text-center md:text-left">
-                Sign up and be part of the <span className="font-bold text-primary-600">movement for change</span> in our community.
+                {siteData.signup.subheading}
               </p>
             </AnimateIn>
 
             <div className="space-y-4">
-              <TextAnimate 
-                as="p" 
-                animation="fadeIn" 
-                by="word" 
-                delay={0.4} 
-                once 
-                className="text-base md:text-lg text-black leading-relaxed"
-              >
-                Join our community and help us build a stronger future together. Your voice matters, and together we can make a difference in our democracy and our communities.
-              </TextAnimate>
-              <TextAnimate 
-                as="p" 
-                animation="fadeIn" 
-                by="word" 
-                delay={0.5} 
-                once 
-                className="text-base md:text-lg text-black leading-relaxed"
-              >
-                Every contribution — no matter the size — goes directly toward expanding voter outreach, supporting grassroots organizers, and funding the programs that strengthen our neighborhoods. Your donation helps keep this movement independent, people-powered, and focused on the issues that matter most to working families.
-              </TextAnimate>
+              {siteData.signup.description.map((paragraph, index) => (
+                <TextAnimate 
+                  key={index}
+                  as="p" 
+                  animation="fadeIn" 
+                  by="word" 
+                  delay={0.4 + index * 0.1} 
+                  once 
+                  className="text-base md:text-lg text-black leading-relaxed"
+                >
+                  {paragraph}
+                </TextAnimate>
+              ))}
             </div>
           </div>
 
           {/* Form Container on Right */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <AnimateIn delay={0.4} className="w-full max-w-lg rounded-lg shadow-xl p-6 md:p-8 lg:p-10 mt-8 md:mt-16" style={{ backgroundColor: '#3498db' }}>
+            <AnimateIn delay={0.4} className="w-full max-w-lg rounded-lg shadow-xl p-6 md:p-8 lg:p-10 mt-8 md:mt-16" style={{ backgroundColor: colors.primary[500] }}>
               <ContactForm 
                 compact={false} 
                 buttonText="SUBMIT"
