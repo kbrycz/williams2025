@@ -106,56 +106,52 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
             required
           />
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email"
-            className={inputBaseClasses}
-            style={{ borderColor: '#ffffff' }}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Phone"
-            maxLength="14"
-            pattern="\(\d{3}\) \d{3}-\d{4}"
-            className={inputBaseClasses}
-            style={{ borderColor: '#ffffff' }}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            required
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-3">
-          <input
-            type="text"
-            name="zipCode"
-            value={formData.zipCode}
-            onChange={handleChange}
-            placeholder="ZIP Code"
-            pattern="[0-9]{5}"
-            maxLength="5"
-            className={inputBaseClasses}
-            style={{ borderColor: '#ffffff' }}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            required
-          />
-          <button
-            type="submit"
-            className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
-          >
-            {buttonText}
-          </button>
-        </div>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email"
+          className={inputBaseClasses}
+          style={{ borderColor: '#ffffff' }}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          required
+        />
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          placeholder="Phone"
+          maxLength="14"
+          pattern="\(\d{3}\) \d{3}-\d{4}"
+          className={inputBaseClasses}
+          style={{ borderColor: '#ffffff' }}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          required
+        />
+        <input
+          type="text"
+          name="zipCode"
+          value={formData.zipCode}
+          onChange={handleChange}
+          placeholder="ZIP Code"
+          pattern="[0-9]{5}"
+          maxLength="5"
+          className={inputBaseClasses}
+          style={{ borderColor: '#ffffff' }}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          required
+        />
+        <button
+          type="submit"
+          className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
+        >
+          {buttonText}
+        </button>
       </form>
     )
   }
