@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Footer from './Footer'
 import AnimateIn from './ui/AnimateIn'
 import { TextAnimate } from '@/components/ui/text-animate'
-import img3Image from '../assets/img3.png'
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -46,14 +45,14 @@ function ContactPage() {
     })
   }
 
-  const inputClasses = "w-full px-5 py-4 rounded-xl bg-white border-2 border-neutral-200 text-neutral-900 text-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 shadow-sm placeholder:font-bold placeholder:text-neutral-400"
+  const inputClasses = "w-full px-5 py-4 rounded-lg bg-white border-2 border-neutral-200 text-neutral-900 text-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 shadow-sm placeholder:font-bold placeholder:text-neutral-400"
 
   return (
     <div className="min-h-screen">
       {/* ===== SECTION 1: Header (White Background) ===== */}
       <section className="w-full bg-white pt-10 pb-6 md:pt-14 md:pb-8 lg:pt-16 lg:pb-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="max-w-2xl mx-auto text-center lg:text-left lg:max-w-none">
+          <div className="max-w-2xl mx-auto text-center">
             <AnimateIn delay={0.1}>
               <p className="text-sm font-bold uppercase tracking-widest mb-4 text-primary-500">
                 Get In Touch
@@ -70,7 +69,7 @@ function ContactPage() {
               We'd love to hear from you.
             </TextAnimate>
             <AnimateIn delay={0.3}>
-              <p className="text-neutral-600 text-lg leading-relaxed max-w-2xl">
+              <p className="text-neutral-600 text-lg leading-relaxed">
                 Whether you have a question, want to get involved, or just want to say hello — drop us a message and we'll get back to you as soon as possible.
               </p>
             </AnimateIn>
@@ -78,125 +77,111 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* ===== SECTION 2: Contact Form + Image ===== */}
+      {/* ===== SECTION 2: Contact Form (White Background) ===== */}
       <section className="w-full bg-white pb-20 md:pb-28 lg:pb-32 pt-6 md:pt-8 lg:pt-10">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Form */}
-            <div>
-              {submitted ? (
-                <AnimateIn delay={0.1}>
-                  <div className="text-center py-16 px-8 rounded-2xl bg-primary-50">
-                    <div className="w-16 h-16 rounded-full bg-primary-500 flex items-center justify-center mx-auto mb-6">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-3">
-                      Message Sent!
-                    </h2>
-                    <p className="text-neutral-600 text-lg mb-8">
-                      Thank you for reaching out. We'll get back to you shortly.
-                    </p>
-                    <button
-                      onClick={() => setSubmitted(false)}
-                      className="bg-primary-500 hover:bg-primary-400 text-white font-bold px-8 py-3 rounded-xl transition-all duration-200 uppercase tracking-widest text-sm hover:scale-105 hover:shadow-lg active:scale-95"
-                    >
-                      Send Another Message
-                    </button>
+          <div className="max-w-2xl mx-auto">
+            {submitted ? (
+              <AnimateIn delay={0.1}>
+                <div className="text-center py-16 px-8 rounded-2xl bg-primary-50">
+                  <div className="w-16 h-16 rounded-full bg-primary-500 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-3">
+                    Message Sent!
+                  </h2>
+                  <p className="text-neutral-600 text-lg mb-8">
+                    Thank you for reaching out. We'll get back to you shortly.
+                  </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="bg-primary-500 hover:bg-primary-400 text-white font-bold px-8 py-3 rounded-lg transition-all duration-200 uppercase tracking-widest text-sm hover:scale-105 hover:shadow-lg active:scale-95"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              </AnimateIn>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                {/* First Name / Last Name - Two Column */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <AnimateIn delay={0.2}>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="First Name"
+                      className={inputClasses}
+                      required
+                    />
+                  </AnimateIn>
+                  <AnimateIn delay={0.25}>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Last Name"
+                      className={inputClasses}
+                      required
+                    />
+                  </AnimateIn>
+                </div>
+
+                {/* Email */}
+                <AnimateIn delay={0.3}>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email Address"
+                    className={inputClasses}
+                    required
+                  />
                 </AnimateIn>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* First Name / Last Name */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <AnimateIn delay={0.2}>
-                      <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        placeholder="First Name"
-                        className={inputClasses}
-                        required
-                      />
-                    </AnimateIn>
-                    <AnimateIn delay={0.25}>
-                      <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        placeholder="Last Name"
-                        className={inputClasses}
-                        required
-                      />
-                    </AnimateIn>
-                  </div>
 
-                  {/* Email */}
-                  <AnimateIn delay={0.3}>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email Address"
-                      className={inputClasses}
-                      required
-                    />
-                  </AnimateIn>
+                {/* Phone */}
+                <AnimateIn delay={0.35}>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Phone Number"
+                    maxLength="14"
+                    pattern="\(\d{3}\) \d{3}-\d{4}"
+                    className={inputClasses}
+                  />
+                </AnimateIn>
 
-                  {/* Phone */}
-                  <AnimateIn delay={0.35}>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone Number"
-                      maxLength="14"
-                      pattern="\(\d{3}\) \d{3}-\d{4}"
-                      className={inputClasses}
-                    />
-                  </AnimateIn>
+                {/* Message */}
+                <AnimateIn delay={0.4}>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your Message"
+                    rows={6}
+                    className={`${inputClasses} resize-none`}
+                    required
+                  />
+                </AnimateIn>
 
-                  {/* Message */}
-                  <AnimateIn delay={0.4}>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Your Message"
-                      rows={6}
-                      className={`${inputClasses} resize-none`}
-                      required
-                    />
-                  </AnimateIn>
-
-                  {/* Submit Button */}
-                  <AnimateIn delay={0.45}>
-                    <button
-                      type="submit"
-                      className="w-full bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-8 py-4 rounded-xl transition-all duration-200 uppercase tracking-widest text-base hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
-                    >
-                      Send Message
-                    </button>
-                  </AnimateIn>
-                </form>
-              )}
-            </div>
-
-            {/* Decorative Image - hidden on mobile, visible on desktop */}
-            <AnimateIn delay={0.3} className="hidden lg:block">
-              <div className="w-full overflow-hidden rounded-2xl shadow-xl sticky top-8">
-                <img
-                  src={img3Image}
-                  alt="Jordan Mitchell at a community event"
-                  className="w-full aspect-[4/5] object-cover"
-                />
-              </div>
-            </AnimateIn>
+                {/* Submit Button */}
+                <AnimateIn delay={0.45}>
+                  <button
+                    type="submit"
+                    className="w-full bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-8 py-4 rounded-lg transition-all duration-200 uppercase tracking-widest text-base hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+                  >
+                    Send Message
+                  </button>
+                </AnimateIn>
+              </form>
+            )}
           </div>
         </div>
       </section>

@@ -1,21 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import heroImage from '../assets/hero.png'
-import logoImage from '../assets/logo.png'
 import { TextAnimate } from '@/components/ui/text-animate'
 import AnimateIn from './ui/AnimateIn'
-
-const NAV_LINKS = [
-  { label: 'ABOUT', to: '/about' },
-  { label: 'NEWS', href: '#news' },
-  { label: "JORDAN'S PLAN", to: '/jordans-plan' },
-  { label: 'CONTACT', to: '/contact' },
-]
 
 function HeroSection() {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Format phone number as (XXX) XXX-XXXX
   const formatPhoneNumber = (value) => {
@@ -43,71 +33,8 @@ function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover object-[75%_top]"
         />
 
-        {/* Gradient overlay for header legibility */}
-        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[1]" />
-
-        {/* Mobile Header Bar */}
-        <div className="relative z-20 px-4 py-4 flex items-center justify-between">
-          <AnimateIn delay={0}>
-            <img 
-              src={logoImage}
-              alt="Campaign Logo"
-              className="h-20 sm:h-24 w-auto"
-            />
-          </AnimateIn>
-          <div className="flex items-center gap-3">
-            <AnimateIn delay={0}>
-              <button className="bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-5 py-2 rounded-md transition-colors duration-200 shadow-lg text-sm">
-                DONATE
-              </button>
-            </AnimateIn>
-            {/* Hamburger Menu Button */}
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white p-1"
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? (
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Dropdown Menu */}
-        {mobileMenuOpen && (
-          <div className="relative z-20 bg-primary-700/95 backdrop-blur-sm border-t border-white/10">
-            <nav className="flex flex-col px-6 py-4 gap-1">
-              {NAV_LINKS.map((link) => (
-                link.to ? (
-                  <Link
-                    key={link.label}
-                    to={link.to}
-                    className="text-white/90 hover:text-white text-sm font-medium tracking-widest py-2.5 border-b border-white/10 last:border-0 transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-white/90 hover:text-white text-sm font-medium tracking-widest py-2.5 border-b border-white/10 last:border-0 transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                )
-              ))}
-            </nav>
-          </div>
-        )}
+        {/* Gradient overlay for Navbar legibility */}
+        <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[1]" />
 
         {/* Top spacer - pushes card toward center-bottom */}
         <div className="flex-1" />
@@ -229,49 +156,8 @@ function HeroSection() {
           className="w-full h-full absolute inset-0 object-cover object-[60%_center] lg:object-top"
         />
 
-        {/* Top Navigation Bar */}
-        <div className="relative z-20 flex items-center justify-between px-8 lg:px-14 xl:px-20 py-5 lg:py-6">
-          {/* Logo + Nav Links */}
-          <div className="flex items-center gap-6 lg:gap-8 xl:gap-10">
-            <AnimateIn delay={0}>
-              <img 
-                src={logoImage}
-                alt="Campaign Logo"
-                className="h-24 lg:h-28 xl:h-32 w-auto"
-              />
-            </AnimateIn>
-            <AnimateIn delay={0.1}>
-              <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
-                {NAV_LINKS.map((link) => (
-                  link.to ? (
-                    <Link
-                      key={link.label}
-                      to={link.to}
-                      className="text-white text-xs xl:text-sm font-medium tracking-[0.15em] hover:text-white/80 transition-colors duration-200 whitespace-nowrap"
-                    >
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="text-white text-xs xl:text-sm font-medium tracking-[0.15em] hover:text-white/80 transition-colors duration-200 whitespace-nowrap"
-                    >
-                      {link.label}
-                    </a>
-                  )
-                ))}
-              </nav>
-            </AnimateIn>
-          </div>
-
-          {/* Donate Button */}
-          <AnimateIn delay={0}>
-            <button className="bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-8 py-3 rounded-md transition-colors duration-200 shadow-lg text-sm tracking-wide">
-              DONATE
-            </button>
-          </AnimateIn>
-        </div>
+        {/* Gradient overlay for Navbar legibility */}
+        <div className="absolute inset-x-0 top-0 h-40 xl:h-48 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[1]" />
 
         {/* Dark Blue Content Card - Anchored to Left Edge */}
         <div className="absolute bottom-10 lg:bottom-14 xl:bottom-16 left-0 z-10 w-full md:w-[55%] lg:w-[58%] xl:w-[53%] 2xl:w-[48%]">

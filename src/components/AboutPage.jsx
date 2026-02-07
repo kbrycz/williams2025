@@ -11,45 +11,24 @@ function AboutPage() {
       {/* ===== SECTION 1: Intro (White Background) ===== */}
       <section className="w-full bg-white pt-10 pb-20 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          {/* Mobile-only title (shown above image on small screens) */}
-          <div className="lg:hidden">
-            <AnimateIn delay={0.1}>
-              <p className="text-sm font-bold uppercase tracking-widest mb-4 text-primary-500">
-                Our Story
-              </p>
-            </AnimateIn>
-            <TextAnimate
-              as="h1"
-              animation="fadeIn"
-              by="word"
-              delay={0.15}
-              once
-              className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-8 leading-tight"
-            >
-              Jordan Mitchell is fighting for the people who built this community.
-            </TextAnimate>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Text Content */}
             <div className="order-last lg:order-first">
-              <div className="hidden lg:block">
-                <AnimateIn delay={0.1}>
-                  <p className="text-sm font-bold uppercase tracking-widest mb-4 text-primary-500">
-                    Our Story
-                  </p>
-                </AnimateIn>
-                <TextAnimate
-                  as="h1"
-                  animation="fadeIn"
-                  by="word"
-                  delay={0.15}
-                  once
-                  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 leading-tight"
-                >
-                  Jordan Mitchell is fighting for the people who built this community.
-                </TextAnimate>
-              </div>
+              <AnimateIn delay={0.1}>
+                <p className="text-sm font-bold uppercase tracking-widest mb-4 text-primary-500">
+                  Our Story
+                </p>
+              </AnimateIn>
+              <TextAnimate
+                as="h1"
+                animation="fadeIn"
+                by="word"
+                delay={0.15}
+                once
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 leading-tight"
+              >
+                Jordan Mitchell is fighting for the people who built this community.
+              </TextAnimate>
               <AnimateIn delay={0.3}>
                 <p className="text-neutral-600 text-lg leading-relaxed mb-6">
                   Jordan has spent his career showing up for the families and neighborhoods that need it most. He believes real change doesn't happen in boardrooms alone — it happens on front porches, at kitchen tables, and through the everyday acts of people coming together.
@@ -70,6 +49,7 @@ function AboutPage() {
                 className="w-full max-w-xl h-auto block rounded-2xl"
                 style={{
                   filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2))',
+                  transform: 'rotate(3deg)',
                 }}
               />
             </AnimateIn>
@@ -80,7 +60,7 @@ function AboutPage() {
       {/* ===== SECTION 2: Bio (Primary Color Background) ===== */}
       <section className="w-full py-16 md:py-20 lg:py-24 bg-primary-500">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <AnimateIn delay={0.1}>
+          <AnimateIn delay={0.1} className="hidden lg:block">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10 lg:mb-12 text-center">
               About Jordan
             </h2>
@@ -100,6 +80,11 @@ function AboutPage() {
 
             {/* Bio Text */}
             <div>
+              <AnimateIn delay={0.1} className="lg:hidden">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">
+                  About Jordan
+                </h2>
+              </AnimateIn>
               <AnimateIn delay={0.3}>
                 <p className="text-white/90 text-lg leading-relaxed mb-6">
                   <strong className="text-white">Jordan Mitchell was born and raised right here in our community</strong> — growing up wasn't always easy. Economic hardship, family struggles, and a system that too often looked the other way shaped Jordan's determination to fight for something better.

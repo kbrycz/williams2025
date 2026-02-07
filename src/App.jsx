@@ -33,7 +33,7 @@ function Layout({ children }) {
 
   return (
     <>
-      {!isHome && <Navbar variant="white" />}
+      <Navbar variant={isHome ? 'transparent' : 'white'} />
       {children}
     </>
   )

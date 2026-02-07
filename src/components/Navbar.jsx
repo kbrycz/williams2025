@@ -48,7 +48,8 @@ function Navbar({ variant = 'transparent' }) {
               <img 
                 src={logoColorImage}
                 alt="Logo"
-                className={`h-28 xl:h-36 2xl:h-44 w-auto ml-4 xl:ml-8 transition-opacity duration-300 ${isWhite ? 'opacity-100' : 'opacity-0'}`}
+                className={`h-24 xl:h-32 2xl:h-40 w-auto ml-4 xl:ml-8 transition-opacity duration-300 ${isWhite ? 'opacity-100' : 'opacity-0'}`}
+                style={{ position: 'relative', top: '10px', left: '10px' }}
               />
               <img 
                 src={logoImage}
@@ -139,7 +140,7 @@ function Navbar({ variant = 'transparent' }) {
               </Link>
             ))}
             {isWhite && (
-              <div className="flex gap-3 pt-3 px-4">
+              <div className="flex gap-3 pt-3 pb-2 px-4">
                 <a href="#" className="w-9 h-9 rounded-full bg-primary-500 flex items-center justify-center text-white transition-colors hover:bg-primary-400" aria-label="Facebook">
                   <span className="font-bold text-sm">f</span>
                 </a>
@@ -151,7 +152,7 @@ function Navbar({ variant = 'transparent' }) {
                 </a>
               </div>
             )}
-            <button className="w-full bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-6 py-3 rounded-md transition-colors duration-200 uppercase tracking-wider text-sm mt-3">
+            <button className="w-full bg-primary-500 hover:bg-primary-400 text-white font-bold px-6 py-3 rounded-md transition-colors duration-200 uppercase tracking-wider text-sm mt-3">
               Donate
             </button>
           </div>

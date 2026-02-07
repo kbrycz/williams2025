@@ -80,7 +80,7 @@ function JordansPlan() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Text Content */}
-            <div>
+            <div className="order-last lg:order-first">
               <AnimateIn delay={0.1}>
                 <p className="text-sm font-bold uppercase tracking-widest mb-4 text-primary-500">
                   His Vision for America
@@ -97,17 +97,6 @@ function JordansPlan() {
                 A bold plan to restore freedom, security, and prosperity.
               </TextAnimate>
 
-              {/* Image - shows here on mobile, hidden on desktop */}
-              <AnimateIn delay={0.2} className="lg:hidden mb-8">
-                <div className="w-full overflow-hidden rounded-2xl shadow-xl">
-                  <img
-                    src={img1Image}
-                    alt="Jordan connecting with the community"
-                    className="w-full aspect-[16/10] object-cover"
-                  />
-                </div>
-              </AnimateIn>
-
               <AnimateIn delay={0.3}>
                 <p className="text-neutral-600 text-lg leading-relaxed mb-6">
                   Jordan believes that government should work for the people — not the other way around. His plan puts American families first, cuts wasteful spending, and restores the values that made this nation great.
@@ -120,8 +109,8 @@ function JordansPlan() {
               </AnimateIn>
             </div>
 
-            {/* Image - shows here on desktop, hidden on mobile */}
-            <AnimateIn delay={0.2} className="hidden lg:block">
+            {/* Image */}
+            <AnimateIn delay={0.2} className="order-first lg:order-last">
               <div className="w-full overflow-hidden rounded-2xl shadow-xl">
                 <img
                   src={img1Image}
