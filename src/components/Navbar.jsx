@@ -122,10 +122,10 @@ function Navbar({ variant = 'transparent' }) {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className={isWhite
-          ? 'xl:hidden bg-white border-t border-neutral-200'
-          : 'xl:hidden bg-primary-700/95 backdrop-blur-sm border-t border-white/10'
+          ? 'xl:hidden bg-white border-t border-neutral-200 mt-4'
+          : 'xl:hidden bg-primary-700/95 backdrop-blur-sm border-t border-white/10 mt-4'
         }>
-          <div className="px-4 py-4 space-y-2">
+          <div className="px-4 py-8 space-y-2">
             {navItems.map((item) => (
               <Link 
                 key={item.name}

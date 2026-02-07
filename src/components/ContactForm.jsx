@@ -71,7 +71,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
   }
 
   if (compact) {
-    // Compact layout for popup modal - stacked on mobile, 2 column grid on larger screens
+    // Compact layout for popup modal - always 2 columns to keep modal short on mobile
     return (
       <form className="space-y-3" onSubmit={handleSubmit}>
         <style>{`
@@ -80,7 +80,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
             color: #3498db;
           }
         `}</style>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <input
             type="text"
             name="firstName"
@@ -106,7 +106,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
             required
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <input
             type="email"
             name="email"
@@ -134,7 +134,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
             required
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <input
             type="text"
             name="zipCode"
