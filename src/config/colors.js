@@ -7,64 +7,64 @@
  */
 
 export const colors = {
-  // Primary colors - blue (#3498db)
+  // Primary colors - navy blue (#000080)
   primary: {
-    50: '#f0f8ff',
-    100: '#dff0fe',
-    200: '#b9e2fd',
-    300: '#7bcbfc',
-    400: '#51b5f8',
-    500: '#3498db', // Your specified primary color
-    600: '#207bbe',
-    700: '#1b639a',
-    800: '#1a547f',
-    900: '#1b4669',
-    950: '#122c44',
+    50: '#f0f0ff',
+    100: '#ddddf9',
+    200: '#b5b5f0',
+    300: '#8585e0',
+    400: '#4545c0',
+    500: '#000080', // Your specified primary color
+    600: '#00006d',
+    700: '#00005a',
+    800: '#000048',
+    900: '#000036',
+    950: '#00001f',
   },
   
-  // Secondary colors - yellow (#f1c40f)
+  // Secondary colors - red (#FF0000)
   secondary: {
-    50: '#fefce8',
-    100: '#fef9c3',
-    200: '#fef08a',
-    300: '#fde047',
-    400: '#f8d316',
-    500: '#f1c40f', // Your specified secondary color
-    600: '#d09e09',
-    700: '#a5740b',
-    800: '#895c10',
-    900: '#734c13',
-    950: '#432807',
+    50: '#fff1f1',
+    100: '#ffe1e1',
+    200: '#ffc7c7',
+    300: '#ffa0a0',
+    400: '#ff5c5c',
+    500: '#FF0000', // Your specified secondary color
+    600: '#e00000',
+    700: '#b80000',
+    800: '#960000',
+    900: '#7a0000',
+    950: '#440000',
   },
   
-  // Accent colors - lighter blue tint that complements the primary
+  // Accent colors - cranberry (#9E2A3A)
   accent: {
-    50: '#f0f8ff',
-    100: '#dff0fe',
-    200: '#b9e2fd',
-    300: '#7bcbfc',
-    400: '#51b5f8',
-    500: '#3498db',
-    600: '#207bbe',
-    700: '#1b639a',
-    800: '#1a547f',
-    900: '#1b4669',
-    950: '#122c44',
+    50: '#fdf2f4',
+    100: '#fce7eb',
+    200: '#f9ced7',
+    300: '#f4a5b4',
+    400: '#e06e80',
+    500: '#9E2A3A', // Your specified accent color
+    600: '#872434',
+    700: '#701e2b',
+    800: '#5d1a25',
+    900: '#50181f',
+    950: '#2c0b11',
   },
   
-  // Neutral colors
+  // Neutral colors - warm brown (#3A2525)
   neutral: {
-    50: '#fafafa',
-    100: '#f5f5f5',
-    200: '#e5e5e5',
-    300: '#d4d4d4',
-    400: '#a3a3a3',
-    500: '#737373',
-    600: '#525252',
-    700: '#404040',
-    800: '#262626',
-    900: '#171717',
-    950: '#0a0a0a',
+    50: '#f9f5f5',
+    100: '#f2ecec',
+    200: '#e6d8d8',
+    300: '#d4baba',
+    400: '#b28e8e',
+    500: '#876060',
+    600: '#6b4a4a',
+    700: '#573838',
+    800: '#3A2525',
+    900: '#321f1f',
+    950: '#1c1111',
   },
   
   // Semantic colors

@@ -162,7 +162,7 @@ function PlanPage() {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href={siteData.campaign.donateUrl}
-                    className="bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-8 py-3 rounded-md text-sm uppercase tracking-widest transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95 inline-block"
+                    className="bg-secondary-500 hover:bg-secondary-400 text-white font-bold px-8 py-3 rounded-md text-sm uppercase tracking-widest transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95 inline-block"
                   >
                     Donate Now
                   </a>

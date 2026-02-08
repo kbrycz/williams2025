@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import AnimateIn from './ui/AnimateIn'
 import sectionImage from '../assets/video-thumbnail.png'
 import siteData from '../config/siteData'
@@ -67,16 +68,16 @@ function VideoSection() {
         {/* Learn More Button */}
         <AnimateIn delay={0.5}>
           <div className="flex justify-center">
-            <a
-              href="#about"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-lg transition-all duration-200 hover:brightness-110 hover:shadow-lg"
-              style={{ backgroundColor: colors.secondary[500], color: colors.primary[800] }}
+            <Link
+              to="/plan"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-lg transition-all duration-200 hover:brightness-110 hover:shadow-lg no-underline"
+              style={{ backgroundColor: colors.secondary[500], color: '#ffffff' }}
             >
               Learn More
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </AnimateIn>
       </div>

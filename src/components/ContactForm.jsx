@@ -149,7 +149,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
         />
         <button
           type="submit"
-          className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
+          className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-white font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
         >
           {buttonText}
         </button>
@@ -232,7 +232,7 @@ function ContactForm({ compact = false, buttonText = "JOIN US", onSubmit }) {
       />
       <button
         type="submit"
-        className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
+        className="w-full px-4 py-3 rounded-md bg-secondary-500 hover:bg-secondary-400 text-white font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary-300 shadow-lg text-base uppercase tracking-wide"
       >
         {buttonText}
       </button>

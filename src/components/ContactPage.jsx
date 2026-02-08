@@ -175,7 +175,7 @@ function ContactPage() {
                 <AnimateIn delay={0.45}>
                   <button
                     type="submit"
-                    className="w-full bg-secondary-500 hover:bg-secondary-400 text-primary-950 font-bold px-8 py-4 rounded-lg transition-all duration-200 uppercase tracking-widest text-base hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+                    className="w-full bg-secondary-500 hover:bg-secondary-400 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 uppercase tracking-widest text-base hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
                   >
                     Send Message
                   </button>
