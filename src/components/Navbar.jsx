@@ -51,12 +51,11 @@ function Navbar({ variant = 'transparent' }) {
                 src={logoColorImage}
                 alt={siteData.campaign.name}
                 className={`h-36 xl:h-48 2xl:h-60 w-auto ml-4 xl:ml-8 transition-opacity duration-300 ${isWhite ? 'opacity-100' : 'opacity-0'}`}
-                style={{ position: 'relative', top: '0px', left: '10px' }}
               />
               <img 
                 src={logoImage}
                 alt={siteData.campaign.name}
-                className={`h-[10.5rem] xl:h-[13.5rem] 2xl:h-[16.5rem] w-auto ml-4 xl:ml-8 absolute top-0 left-0 transition-opacity duration-300 ${isWhite ? 'opacity-0' : 'opacity-100'}`}
+                className={`h-36 xl:h-48 2xl:h-60 w-auto ml-4 xl:ml-8 absolute top-0 left-0 transition-opacity duration-300 ${isWhite ? 'opacity-0' : 'opacity-100'}`}
               />
             </Link>
           </AnimateIn>
